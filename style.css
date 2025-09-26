@@ -1,0 +1,141 @@
+body {
+    font-family: 'Arial Black', Gadget, sans-serif;
+    background: linear-gradient(to right, #000000, #434343);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #ffd700; /* Золотой */
+    text-shadow: 2px 2px 4px #000;
+    font-size: 2.5em;
+}
+
+#textInput {
+    width: 80%;
+    padding: 15px;
+    font-size: 18px;
+    margin: 20px 0;
+    border: 3px solid #ffd700;
+    border-radius: 10px;
+    background: #222;
+    color: white;
+    text-align: center;
+}
+
+.background-options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.bg-option {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.bg-option:hover, .bg-option.selected {
+    border-color: #ff0000; /* Красная обводка при выборе */
+    transform: scale(1.05);
+}
+
+button {
+    background: linear-gradient(to bottom, #ff0000, #8b0000); /* Красный градиент */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ff0000;
+}
+
+#memeCanvas {
+    max-width: 100%;
+    margin-top: 30px;
+    border: 5px solid #ffd700;
+    border-radius: 10px;
+    display: none; /* Показываем только после генерации */
+}
+
+/* Стили для рекламных блоков */
+.ad-container {
+    margin: 20px auto;
+    text-align: center;
+    max-width: 728px;
+}
+
+/* Стили для блока донатов */
+.donate-section {
+    background: linear-gradient(135deg, #1a1a1a, #333);
+    border: 2px solid #ffd700;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 500px;
+}
+
+.donate-section h3 {
+    color: #ffd700;
+    margin-bottom: 10px;
+}
+
+.donate-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.donate-btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    min-width: 120px;
+}
+
+.donate-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px currentColor;
+}
+
+.yoomoney {
+    background: linear-gradient(45deg, #00b0ff, #0091ea);
+}
+
+.donationalerts {
+    background: linear-gradient(45deg, #ff4444, #cc0000);
+}
+
+.crypto {
+    background: linear-gradient(45deg, #f7931a, #ff9900);
+}

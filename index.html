@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Яндекс.Реклама -->
+<script>
+    (function(w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function() {
+            Ya.Context.AdvManager.render({
+                blockId: "R-A-XXXXXX-XX", // Замени на свой blockId
+                renderTo: "yandex_rtb_R-A-XXXXXX-XX", // Замени на свой renderTo
+                async: true
+            });
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "https://an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор Ауф-Контента | Даня Ауф</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Блок донатов -->
+<div class="donate-section">
+    <h3>Поддержи смотрящего за русским геймдевом!</h3>
+    <p>Брат, если генератор помог - кинь на пачку сижек</p>
+    
+    <div class="donate-buttons">
+        <!-- ЮMoney -->
+        <a href="https://yoomoney.ru/to/4100118046301784" target="_blank" class="donate-btn yoomoney">
+            💰 ЮMoney
+        </a>
+        
+        <!-- Crypto (Bitcoin) -->
+        <button class="donate-btn crypto" onclick="showCryptoAddress()">
+            ₿ Crypto
+        </button>
+    </div>
+    
+    <!-- Скрытый блок с крипто-адресами -->
+    <div id="cryptoAddresses" style="display: none; margin-top: 15px;">
+        <p><strong>BTC:</strong> bc1qxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+        <p><strong>ETH:</strong> 0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+        <button onclick="copyCryptoAddress('btc')">Копировать BTC</button>
+        <button onclick="copyCryptoAddress('eth')">Копировать ETH</button>
+    </div>
+</div>
+        <h1>ГЕНЕРАТОР РУССКОЙ СИЛЫ</h1>
+        <p>Введи текст и выбери фон для своего мема</p>
+
+        <!-- Поле для ввода текста -->
+        <input type="text" id="textInput" placeholder="Например: В 20:00 РЕЙД НА АМЕРИКУ" maxlength="50">
+
+        <!-- Блок выбора фона -->
+        <div class="backgrounds">
+            <h3>Выбери фон:</h3>
+            <div class="background-options">
+                <img src="bear.jpg" data-bg="bear.jpg" class="bg-option" alt="Медведь">
+                <img src="balaclava.jpg" data-bg="balaclava.jpg" class="bg-option" alt="Балаклава">
+                <img src="skull.jpg" data-bg="skull.jpg" class="bg-option" alt="Череп">
+                <!-- Картинки bear.jpg, balaclava.jpg нужно будет найти и положить в папку -->
+            </div>
+        </div>
+
+        <!-- Кнопка генерации -->
+        <button id="generateBtn">СГЕНЕРИРОВАТЬ МЕМ</button>
+
+        <!-- Холст, где будет появляться картинка -->
+        <div class="result">
+            <canvas id="memeCanvas"></canvas>
+            <button id="downloadBtn" style="display: none;">СКАЧАТЬ МЕМ</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
